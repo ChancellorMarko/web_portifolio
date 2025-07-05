@@ -3,7 +3,7 @@
     padding: 120px 50px 90px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     min-height: 500px;
     box-sizing: border-box;
 }
@@ -60,7 +60,7 @@
     box-shadow: 0 15px 35px rgba(219, 52, 52, 0.15);
 }
 
-/* Responsivity */
+/* Responsiveness */
 @media (max-width: 992px) {
     #sobre {
         flex-direction: column;

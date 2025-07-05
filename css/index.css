@@ -5,3 +5,11 @@ body {
     padding: 0;
     scroll-behavior: smooth;
 }
+
+.ctrl-div {
+    width: 90%;
+    justify-content: space-between;
+    justify-items: center;
+    display: flex;
+    flex-direction: row;
+}

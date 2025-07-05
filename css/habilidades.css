@@ -1,0 +1,92 @@
+/* Estilos para a seção Habilidades */
+#habilidades {
+    background-color: #ffffff;
+    padding: 100px 40px;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+}
+
+#abilities-box-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Card style */
+.ability-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 5px 20px rgba(219, 52, 52, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ability-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(219, 52, 52, 0.12);
+    border-color: #db3434;
+}
+
+.title-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title-div img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.title-div h2 {
+    color: #515151;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ability-box p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #habilidades {
+        padding: 70px 30px;
+    }
+
+    #abilities-box-div {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #habilidades {
+        padding: 50px 20px;
+    }
+
+    .ability-box {
+        padding: 25px;
+    }
+
+    .title-div h2 {
+        font-size: 20px;
+    }
+
+    .ability-box p {
+        font-size: 15px;
+    }
+}
