@@ -10,7 +10,6 @@
 
 /* text conteainer */
 #sobre-text-div {
-    flex: 1;
     max-width: 600px;
     padding-right: 45px;
 }
@@ -18,30 +17,25 @@
 #sobre h2 {
     color: #db3434;
     font-size: 24px;
-    font-weight: 600;
     margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 #sobre h1 {
     color: #515151;
     font-size: 48px;
-    font-weight: 700;
     margin-bottom: 25px;
-    line-height: 1.2;
 }
 
 #sobre p {
     color: #666666;
     font-size: 18px;
-    line-height: 1.6;
     margin-bottom: 30px;
 }
 
 /* Image container */
 #sobre-image-div {
-    flex: 1;
     max-width: 500px;
     text-align: center;
 }
@@ -69,7 +63,7 @@
     }
 
     #sobre-text-div {
-        padding-right: 0;
+        padding: 0;
         margin-bottom: 50px;
         max-width: 100%;
     }
@@ -78,8 +72,22 @@
         font-size: 42px;
     }
 
+    #sobre h2 {
+        font-size: 28px;
+    }
+
+    #sobre p {
+        font-size: 16px;
+    }
+
     #sobre-image-div {
-        max-width: 350px;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #sobre-image-div img {
+        max-width: 300px;
     }
 }
 
@@ -101,6 +109,12 @@
     }
 
     #sobre-image-div {
-        max-width: 280px;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #sobre-image-div img {
+        max-width: 250px;
     }
 }

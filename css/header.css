@@ -20,9 +20,9 @@ header.scrolled {
 
 /* Centralized container */
 .header-container {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,6 @@ header.scrolled {
 #header-title {
     color: #515151;
     font-size: 26px;
-    font-weight: 700;
     margin: 0;
     letter-spacing: -0.5px;
     transition: all 0.3s ease;
@@ -48,9 +47,8 @@ header.scrolled {
 #nav-bar a {
     color: #515151;
     text-decoration: none;
-    font-weight: 500;
     font-size: 16px;
-    padding: 8px 0;
+    padding: 8px;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -82,7 +80,6 @@ header.scrolled {
     border: none;
     padding: 12px 24px;
     border-radius: 50px;
-    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(219, 52, 52, 0.2);
@@ -91,7 +88,6 @@ header.scrolled {
 
 #header-contact-button:hover {
     background-color: #b92929;
-    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(219, 52, 52, 0.3);
 }
 
@@ -106,21 +102,20 @@ header.scrolled {
 /* Responsiveness */
 @media (max-width: 1240px) {
     .header-container {
-        padding: 0 20px;
+        padding: 20px;
     }
 }
 
 @media (max-width: 992px) {
     header {
-        padding: 20px 0;
+        padding: 20px;
     }
 
     .header-container {
-        padding: 0 30px;
+        padding: 12px;
     }
 
     #nav-bar {
-        order: 3;
         width: 100%;
         margin-top: 16px;
         display: none;
@@ -133,7 +128,7 @@ header.scrolled {
     #nav-bar ul {
         flex-direction: column;
         gap: 8px;
-        padding: 16px 0;
+        padding: 16px;
     }
 
     .menu-toggle {
@@ -149,11 +144,11 @@ header.scrolled {
 
 @media (max-width: 576px) {
     header {
-        padding: 16px 0;
+        padding: 16px;
     }
 
     .header-container {
-        padding: 0 20px;
+        padding: 20px;
     }
 
     #header-title {

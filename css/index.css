@@ -8,8 +8,16 @@ body {
 
 .ctrl-div {
     width: 90%;
+    display: flex;
     justify-content: space-between;
     justify-items: center;
-    display: flex;
-    flex-direction: row;
+}
+
+/* Responsivess */
+@media (max-width: 992px) {
+    .ctrl-div{
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
 }
