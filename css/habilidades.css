@@ -18,6 +18,20 @@
     justify-items: center;
 }
 
+.section-title_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.section-title_div h2 {
+    font-size: 30px;
+    color: #db3434;
+    text-transform: uppercase;
+}
+
 /* Card style */
 .ability-box {
     background-color: #ffffff;

@@ -1,38 +1,60 @@
+// Scroll Effect
+
+let lastScroll = 0;
+const header = document.querySelector('header');
+const scrollThreshold = 350; // Pixels to hide header
+
+window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset;
+
+    // Header is shortened when the user starts to scroll down
+    if (currentScroll > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+
+    // Hide the header when the user scroolls past the threshold
+    if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
+        header.classList.add('hide');
+    } else {
+        header.classList.remove('hide');
+    }
+
+    lastScroll = currentScroll;
+});
+
+// Hamburg menu
 document.addEventListener('DOMContentLoaded', function () {
-    // Hamburg menu
-    const menuToggle = document.createElement('div');
-    menuToggle.className = 'menu-toggle';
-    menuToggle.innerHTML = '☰';
-    document.querySelector('header').appendChild(menuToggle);
+    const menuToggle = document.getElementById('menu-toggle');
+    const navBar = document.getElementById('nav-bar');
+    const header = document.querySelector('header');
+    const navOverlay = document.createElement('div');
 
-    const nav = document.querySelector('#nav-bar');
+    // Creates the overlay
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
 
-    menuToggle.addEventListener('click', function () {
-        nav.classList.toggle('active');
+    // Close and open logic
+    menuToggle.addEventListener('click', function ()
+    {
+        this.classList.toggle('active');
+        navBar.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        header.classList.toggle('active');
+        document.body.style.overflow = navBar.classList.contains('active') ? 'hidden' : '';
     });
 
-    // Scroll effect
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
-    // On click hide menu
+    navOverlay.addEventListener('click', closeMenu);
     document.querySelectorAll('#nav-bar a').forEach(link => {
-        link.addEventListener('click', function () {
-            if (window.innerWidth <= 992) {
-                nav.classList.remove('active');
-            }
-        });
+        link.addEventListener('click', closeMenu);
     });
 
-    // Button animation
-    const contactButton = document.getElementById('header-contact-button');
-    contactButton.addEventListener('click', function () {
-        window.location.href = '#contato';
-    });
+    function closeMenu() {
+        menuToggle.classList.remove('active');
+        navBar.classList.remove('active');
+        navOverlay.classList.remove('active');
+        header.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 });
