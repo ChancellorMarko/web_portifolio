@@ -61,7 +61,8 @@ portfolio-title-div {
     justify-content: center;
 }
 
-.portifolio-text-div a, h3 {
+.portifolio-text-div a,
+.portifolio-text-div h3 {
     color: #515151;
     font-size: 24px;
     text-decoration: none;
@@ -70,11 +71,13 @@ portfolio-title-div {
     position: relative;
 }
 
-.portifolio-text-div a:hover, h3:hover {
+.portifolio-text-div a:hover,
+.portifolio-text-div h3:hover {
     color: #db3434;
 }
 
-.portifolio-text-div a::after, h3::after {
+.portifolio-text-div a::after,
+.portifolio-text-div h3::after {
     content: '';
     position: absolute;
     width: 0;
@@ -85,7 +88,9 @@ portfolio-title-div {
     transition: width 0.3s ease;
 }
 
-.portifolio-text-div a:hover::after, h3:hover::after {
+
+.portifolio-text-div a:hover::after,
+.portifolio-text-div h3:hover::after {
     width: 100%;
 }
 
