@@ -1,0 +1,161 @@
+/* Estilo da seção Contato */
+#contato {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+#contato-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+#contato-title-div h2 {
+    font-size: 30px;
+    color: #db3434;
+    text-transform: uppercase;
+}
+
+#contato-card-box {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.contato-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(219, 52, 52, 0.1);
+    padding: 40px;
+    width: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.contato-card:hover {
+    box-shadow: 0 15px 40px rgba(219, 52, 52, 0.15);
+}
+
+.contato-card-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contato-card-title img {
+    width: 40px;
+    height: 40px;
+}
+
+.contato-card-title h3 {
+    color: #515151;
+    font-size: 24px;
+    margin: 0;
+}
+
+.contato-text-div {
+    margin-bottom: 30px;
+}
+
+.contato-text-div p {
+    color: #666666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contato-text-div p::before {
+    content: '•';
+    color: #db3434;
+    font-size: 24px;
+}
+
+.contato-button-div {
+    text-align: center;
+}
+
+.contato-button-div .button {
+    display: inline-block;
+    background-color: #db3434;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(219, 52, 52, 0.2);
+    border: 2px solid transparent;
+}
+
+.contato-button-div .button:hover {
+    background-color: white;
+    color: #db3434;
+    border-color: #db3434;
+    box-shadow: 0 6px 15px rgba(219, 52, 52, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsiviness */
+@media (max-width: 768px) {
+    #contato {
+        padding: 60px 20px;
+    }
+
+    #contato-card-box {
+        flex-direction: column;
+    }
+
+    .contato-card {
+        padding: 30px;
+    }
+
+    .contato-div-title h2 {
+        font-size: 28px;
+    }
+
+    .contato-card-title h3 {
+        font-size: 20px;
+    }
+
+    .contato-text-div p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 512px) {
+    #contato {
+        padding: 50px 15px;
+    }
+
+    .contato-card {
+        width: 90%;
+        padding: 25px 20px;
+    }
+
+    .contato-card-title {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .contato-card-title h3 {
+        font-size: 20px;
+    }
+
+    .contato-text-div p {
+        font-size: 16px;
+    }
+}
