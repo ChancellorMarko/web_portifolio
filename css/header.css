@@ -14,7 +14,6 @@ header {
     gap: 30px;
 }
 
-/* Scroll effect */
 header.scrolled {
     padding: 16px 40px;
     background-color: rgba(255, 255, 255, 0.98);
@@ -25,7 +24,6 @@ header.hide {
     transform: translate(-100%);
 }
 
-/* Centralized container */
 .header-container {
     width: 90%;
     max-width: 1200px;
@@ -101,7 +99,7 @@ header.hide {
 /* Hamburg menu */
 .menu-toggle {
     display: none;
-    /* Escondido em desktop */
+    /* Hidden on desktop */
     cursor: pointer;
     background: none;
     border: none;
@@ -110,7 +108,7 @@ header.hide {
     transition: all 0.3s ease;
 }
 
-/* Ícone do hamburguer moderno */
+/* Modern hamburguer icon */
 .menu-toggle .hamburger {
     display: block;
     width: 30px;
